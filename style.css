@@ -1,0 +1,227 @@
+/* ================================
+   BASIC RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+
+    /* Dark gradient background */
+    background:
+        radial-gradient(circle at top left, #29245c, transparent 40%),
+        radial-gradient(circle at bottom right, #173b4d, transparent 40%),
+        #080b16;
+
+    color: white;
+
+    padding: 20px;
+}
+
+
+/* ================================
+   CLOCK CONTAINER
+================================ */
+
+.clock-container {
+    width: min(90vw, 650px);
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    /* Shadow */
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        inset 0 0 25px rgba(255, 255, 255, 0.03);
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.heading {
+    font-size: 14px;
+
+    letter-spacing: 5px;
+
+    color: #8ee7ff;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================================
+   TIME
+================================ */
+
+.time {
+    font-family: "Orbitron", sans-serif;
+
+    font-size: clamp(45px, 10vw, 85px);
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    /* Neon text effect */
+    text-shadow:
+        0 0 10px rgba(79, 220, 255, 0.8),
+        0 0 25px rgba(79, 220, 255, 0.4);
+
+    white-space: nowrap;
+}
+
+
+/* ================================
+   AM / PM
+================================ */
+
+.period {
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #8ee7ff;
+
+    letter-spacing: 3px;
+
+    margin-top: 10px;
+}
+
+
+/* ================================
+   DATE
+================================ */
+
+.date {
+    margin-top: 25px;
+
+    font-size: 17px;
+
+    color: #d5d9e8;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   DECORATIVE LINE
+================================ */
+
+.line {
+    width: 70%;
+
+    height: 1px;
+
+    margin: 25px auto;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #65ddff,
+        transparent
+    );
+
+    box-shadow: 0 0 10px #65ddff;
+}
+
+
+/* ================================
+   LIVE STATUS
+================================ */
+
+.status {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #75ffb2;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 600px) {
+
+    .clock-container {
+        padding: 35px 20px;
+    }
+
+    .heading {
+        font-size: 12px;
+
+        letter-spacing: 3px;
+    }
+
+    .time {
+        letter-spacing: 2px;
+    }
+
+    .date {
+        font-size: 14px;
+    }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .clock-container {
+        padding: 30px 15px;
+
+        border-radius: 20px;
+    }
+
+    .time {
+        font-size: 38px;
+
+        letter-spacing: 1px;
+    }
+
+    .period {
+        font-size: 15px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+
+    .line {
+        width: 85%;
+    }
+}
